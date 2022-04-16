@@ -1,0 +1,14 @@
+下文以wdClient放在home/目录下为例：
+1.给wdClient文件夹授予权限，命令为：chmod -R +777 /home/wdClient/
+2.在home/wdClient/下打开终端，执行：ln -S libcurl.so libcurl.so.4，可生成一个libcurl.so.4文件
+3.打开wdClient/netconfig.ini文件，修改[Serverip]、[WebURL]、[rpc_ip]为当前wd服务器ip
+4.打开wdClient/wdconfigitem.ini文件，修改:
+   SeatName=需要登录的席位名称
+   Account=需要登录的席位账号
+   Domain=本级域名
+   Deptname=部门名称
+   Orgname=指挥所名称
+**打开wd服务器，桌面找到“系统部署管理工具”，双击打开，输入用户名、密码cmmanager，点击登录，在左侧树形结
+   构里，顶层为指挥所名称，下一级为部门名称，再下一级为席位名称。点击“辅助工具”，点击打开“应用配置工具”，
+   第二行为本级域名。
+5.在home/wdClient/下打开终端，执行：./cefclient 即可。
